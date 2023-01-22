@@ -9,6 +9,7 @@
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
     "tunnel": "ngrok http 5002",
+    "tunnel1": "ngrok http fmc-env.eba-kiqupz9h.us-east-1.elasticbeanstalk.com:443/fmc",
     "pdserve": "nodemon index.js"
   },
   "engines": {
