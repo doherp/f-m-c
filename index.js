@@ -41,7 +41,7 @@ restService.use(bodyParser.json());
 
 //  expres app test route (GET). this give testsignal for simple conn to service as get eg by webpage call
 restService.get("/", (req, res) => {
-  res.send("CONFIRMED RECEIPT OF GET.");
+  res.send("CONFIRMED RECEIPT OF GET1.");
 });
 
 restService.post("/fmc", app);
