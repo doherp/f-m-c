@@ -8,7 +8,7 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "tunnel": "ngrok http 5002",
+    "tunnel": "ngrok http 5002 --authtoken 2Kh8HGOnUcHDIoHt8f6bl2mfNFE_4PdxnB5TCY4sDvUx4EP8A",
     "pdserve": "nodemon index.js"
   },
   "engines": {

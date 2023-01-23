@@ -41,7 +41,7 @@ restService.use(bodyParser.json());
 
 //  expres app test route (GET). this give testsignal for simple conn to service as get eg by webpage call
 restService.get("/", (req, res) => {
-  res.send("CONFIRMED RECEIPT OF GET5.");
+  res.send("CONFIRMED RECEIPT OF GET7.");
 });
 
 //  expres app test route (GET). this give testsignal for simple conn to service as get eg by webpage call
@@ -49,9 +49,9 @@ restService.get("/scratch/test.htm", (req, res) => {
   res.send("CONFIRMED RECEIPT OF test.htm.");
 });
 
-//.well-known\pki-validation
-app.use('/.well-known', express.static('.well-known'))
-
+//make directories available to serve content
+restService.use('/.well-known', express.static('.well-known'));
+restService.use('/scratch', express.static('scratch'));
 
 restService.post("/fmc", app);
 
