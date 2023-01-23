@@ -49,6 +49,10 @@ restService.get("/scratch/test.htm", (req, res) => {
   res.send("CONFIRMED RECEIPT OF test.htm.");
 });
 
+//.well-known\pki-validation
+app.use('/.well-known', express.static('.well-known'))
+
+
 restService.post("/fmc", app);
 
 //simpler testsignal mtd and demo of using req,res format as often used in democode
