@@ -50,8 +50,16 @@ restService.get("/scratch/test.htm", (req, res) => {
 });
 
 //make directories available to serve content
-restService.use('/.well-known', express.static('.well-known'));
+//restService.use('/.well-known', express.static('.well-known'));
 restService.use('/scratch', express.static('scratch'));
+
+
+ restService.get('/.well-known/pki-validation/63746AE1A022E460DA291AED6F40DE09.txt', (req, res) => {
+   const filePath = `${__dirname}/.well-known/pki-validation/63746AE1A022E460DA291AED6F40DE09.txt`;
+   res.download(filePath);
+ });
+
+
 
 restService.post("/fmc", app);
 
